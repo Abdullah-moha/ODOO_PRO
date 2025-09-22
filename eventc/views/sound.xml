@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding ="UTF-8" ?>
+<odoo>
+    <data>
+       
+        <record id="sound_view_tree" model="ir.ui.view">
+            <field name="name">sound view tree</field>
+            <field name="model">tags</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                    <field name="color" widget="color_picker"/>
+                </list>
+            </field>
+            
+        </record>        
+        <record id="sound_view_form" model="ir.ui.view">
+            <field name="name">sound view form</field>
+            <field name="model">tags</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="color" widget="color_picker"/>
+                        </group>
+                    </sheet>
+                </form>   
+            </field>
+        </record>
+
+        <record id="sound_action" model="ir.actions.act_window">
+            <field name="name">Sound equipment</field>
+            <field name="res_model">tags</field>
+            <field name="view_mode">list,form</field>         
+        </record>
+
+        <menuitem
+        id="sound_m"
+        name="Sound equi"
+        parent="orgainzer_menu"
+        action="sound_action"
+        />
+          
+    </data>
+
+</odoo>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding ="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="orgainzer_view_tree" model="ir.ui.view">
+            <field name="name">orgainzer view tree</field>
+            <field name="model">tagm</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                </list>
+            </field>
+            
+        </record>        
+        <record id="orgainzer_view_form" model="ir.ui.view">
+            <field name="name">orgainzer view form</field>
+            <field name="model">tagm</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <field name="image" class="oe_avatar" widget="image" />
+                        <div class="oe_title">
+                            <lebel for="name"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+
+                        <group>
+                            <group>
+                                <field name="lname"/>
+                                <field name="name"/>
+                                <field name="phone"/>
+                            </group>
+                            <group>
+                                <field name="email"/>
+                                <field name="gender"/>
+                                <field name="jdata"/>
+                                <field name="event"/>
+                                </group>
+                        </group>
+                        
+                        <notebook>
+                                <page string="Extra details">
+                                    <group>
+                                        <field name="re"/>
+                                        <field name="co"/>
+                                    </group>
+                                </page>
+                        </notebook>   
+                    </sheet>
+                </form>   
+            </field>
+        </record>
+
+        <record id="member_action" model="ir.actions.act_window">
+            <field name="name">Members</field>
+            <field name="res_model">tagm</field>
+            <field name="view_mode">list,form</field>         
+        </record>
+
+        <menuitem
+        id="memb_m"
+        name="Members"
+        parent="orgainzer_menu"
+        action="member_action"
+        sequence="1"
+        />
+          
+    </data>
+</odoo>

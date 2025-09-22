@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_tags,access_tags,model_tags,,1,1,1,1
+access_tagp,access_tagp,model_tagp,,1,1,1,1
+access_tagm,access_tagm,model_tagm,,1,1,1,1

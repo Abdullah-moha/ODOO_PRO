@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding ="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="event_test_for_odoo_leran" model="ir.ui.view">
+            <field name="name">event_test_for_odoo_leran</field>
+            <field name="model">event.event</field>
+            <field name="inherit_id" ref="event.view_event_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='organizer_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//page[@name='event_communication']" position="after">
+                    <page string="Materials">
+                        <group>
+                            <field name="Sund" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                            <field name="Projection" widget="many2many_tags" options="{'color_field': 'color'}" />
+                        </group>
+                    </page>
+                </xpath>
+                <field name="address_id" position="after">
+                    <field name="test"/>
+                </field>
+                <field name="badge_image" position="after">
+                    <field name="organization" widget="many2many_tags"/>
+
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

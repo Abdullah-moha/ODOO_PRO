@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <menuitem
+        id="orgainzer_menu"
+        name="Orgainzer" 
+        parent="event.event_main_menu" 
+        sequence="3"
+    />
+    <menuitem
+        id="equipment_menu"
+        name="Equipment" 
+        parent="event.event_main_menu" 
+        sequence="20"
+    />
+</odoo>
